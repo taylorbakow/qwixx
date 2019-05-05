@@ -6,9 +6,8 @@
 		<title>Qwixx</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet" type="text/css">
-		
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.2/themes/redmond/jquery-ui.css" />
-        		<link rel="stylesheet" type="text/css" href="css/style_less.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_less.css" />
 		<script type="application/javascript" src="js/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 		<script type="application/javascript" src="js/tappy.js"></script>
@@ -18,6 +17,12 @@
 
 	<body>
 		<div class="wrapper">
+			<div class="row">
+				<h1 class="text-center" style="
+				text-align:  center;
+				font-size: 4rem;
+				">Bakow Quix Scoresheet</h1>
+			</div>
 			<div class="row red">
 				<div class="border"></div>
 			</div>
@@ -30,11 +35,12 @@
 			<div class="row blue">
 				<div class="border"></div>
 			</div>
+
 			<div class="row additional">
-				<div class="failure">X</div>
-				<div class="failure">X</div>
-				<div class="failure">X</div>
-				<div class="failure">X</div>
+				<div class="scratch">X</div>
+				<div class="scratch">X</div>
+				<div class="scratch">X</div>
+				<div class="scratch">X</div>
 			</div>
 			<div class="row results">
 				<div class="result red"></div>
@@ -45,29 +51,121 @@
 				<div class="math">+</div>
 				<div class="result blue"></div>
 				<div class="math">-</div>
-				<div class="result failures"></div>
+				<div class="result scratchs"></div>
 				<div class="math">=</div>
 				<div class="result finalResult"></div>
 			</div>
 
-			<div class="row"></div>
+			<div class="row scoring">
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							X
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							Points
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							1x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							1
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							2x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							3
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							3x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							6
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							4x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							10
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							5x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							15
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							6x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							21
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							7x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							28
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							8x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							36
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							9x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							45
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							10x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							55
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							11x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							66
+						</div>
+					</div>
+					<div class="scoring">
+						<div style="text-align: center; font-size: 22px;">
+							12x
+						</div>
+						<div style="text-align: center; font-size: 22px; border-top: 1px solid black">
+							78
+						</div>
+					</div>
+				</div>
 
-			<div class="dices">
-				<div class="dice d1 red"></div>
-				<div class="dice d2 yellow"></div>
-				<div class="dice d3 green"></div>
-				<div class="dice d4 blue"></div>
-				<div class="dice d5 white"></div>
-				<div class="dice d6 white"></div>
+			<div class="reset text-center" style="text-align: center;">
+				<img id="svgResetImg" xlink:href="restart.svg" src="restart.svg" style="width: 65px;">
 			</div>
-
-            <div class="reset"><img id="svgResetImg" xlink:href="restart.svg" src="restart.png" /></div>
-			<div class="highscore"><img id="svgHighscoreImg" xlink:href="highscore.svg" src="highscore.png" /></div>
-			
-            <div id="highscore_dialog" class="dialog">
-                <br />Qwixx Highscore: <span class="highscore_value">0</span>
-            </div>
-
 		</div>
 	</body>
 </html>

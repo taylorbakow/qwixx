@@ -29,7 +29,7 @@ body {
 	height: 52px;
 }
 
-.row .field, .row .field .cross, .row .failure, .row.results .result, .row.results .math {
+.row .field, .row .field .cross, .row .scratch, .row.results .result, .row.results .math {
 	padding: 10px 0 0 0;
 	width: 50px;
 	height: 40px;	
@@ -63,11 +63,21 @@ body {
 }
 
 
-.row .border, .row .field, .row .failure, .row .result {
-	border-radius: 5px;
+.row .border, .row .field, .row .scratch, .row .result {
+	border-radius: 12px;
 }
 
-.row .failure {
+.row .scratch {
+	color: #FFF;
+	border: 2px solid #C4C4C4;
+	float: right;
+	width: 40px;
+	height: 36px;
+	margin: 3px;
+	padding: 2px;
+}
+
+.row .scoring {
 	color: #FFF;
 	border: 2px solid #C4C4C4;
 	float: right;
@@ -103,7 +113,7 @@ body {
 	width: 25px;
 }
 
-.row .failure.crossed-out {
+.row .scratch.crossed-out {
 	color: #000;
 }
 
@@ -209,7 +219,7 @@ body {
 	background: #AAAAAF;
 }
 
-.row.results .result, .row .failure {
+.row.results .result, .row .scratch {
 	background: #FFF;
 }
 
@@ -250,43 +260,4 @@ body {
 	background: url("../black_lock.png") #EEEEEE;
 	background-repeat: no-repeat;
 	background-position: 2px 2px; 
-}
-
-.dices {
-	width: 468px;
-	cursor: pointer;
-	margin: 0 auto;
-	float: left;
-}
-
-.dices .dice {
-	border: 1px solid black;
-	border-radius: 6px;
-	height: 54px;
-	width: 54px;
-	padding: 6px;
-	float: left;
-	margin: 5px;
-}
-
-.dices .dice .dot {
-	width: 10px;
-	height: 10px;
-	border-radius:  5px;
-	float: left;
-	margin: 4px;
-	border: 0;
-}
-
-.dice.d1 .dot.d5, 
-.dice.d2 .dot.d7, .dice.d2 .dot.d3,
-.dice.d3 .dot.d1, .dice.d3 .dot.d5, .dice.d3 .dot.d9,
-.dice.d4 .dot.d1, .dice.d4 .dot.d3, .dice.d4 .dot.d7, .dice.d4 .dot.d9,
-.dice.d5 .dot.d1, .dice.d5 .dot.d3, .dice.d5 .dot.d5, .dice.d5 .dot.d7, .dice.d5 .dot.d9,
-.dice.d6 .dot.d1, .dice.d6 .dot.d3, .dice.d6 .dot.d4, .dice.d6 .dot.d6, .dice.d6 .dot.d7, .dice.d6 .dot.d9 {
-	background: black;
-}
-
-.dice.white {
-	background: white;
 }

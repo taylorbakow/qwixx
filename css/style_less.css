@@ -24,7 +24,7 @@ body {
 }
 .row .field,
 .row .field .cross,
-.row .failure,
+.row .scratch,
 .row .result,
 .row .result,
 .row .math {
@@ -39,9 +39,9 @@ body {
 }
 .row .border,
 .row .field,
-.row .failure,
+.row .scratch,
 .row .result {
-  border-radius: 5px;
+  border-radius: 12px;
 }
 .row .field {
   position: relative;
@@ -60,7 +60,7 @@ body {
 .row .field.crossed-out .cross {
   display: block;
 }
-.row .failure {
+.row .scratch {
   color: #FFF;
   border: 2px solid #C4C4C4;
   float: right;
@@ -70,6 +70,19 @@ body {
   padding: 2px;
   background: #FFF;
 }
+
+.row .scoring {
+	color: black;
+	border: 2px solid #C4C4C4;
+	width: 33px;;
+	height: 43px;
+	margin: 3px;
+  padding: 1px;
+  display: inline-block;
+  background: #FFF;
+  border-radius: 10px;
+}
+
 .row.results {
   padding: 5px;
 }
@@ -89,8 +102,8 @@ body {
 .blue-finished .row.results .result.blue {
   color: #000;
 }
-.row .failure.crossed-out,
-.row .failures.crossed-out {
+.row .scratch.crossed-out,
+.row .scratchs.crossed-out {
   color: #000000;
 }
 .row.results {
@@ -200,90 +213,4 @@ body {
   background: url("../black_lock.png") #ffffff no-repeat 2px 2px;
 }
 .reset,
-.highscore {
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  float: right;
-}
 .reset img,
-.highscore img {
-  width: 50px;
-  height: 50px;
-}
-.noLocalStorage .highscore {
-  display: none;
-}
-.dices {
-  width: 492px;
-  cursor: pointer;
-  margin: 0 auto;
-  float: left;
-}
-.dices .dice {
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 50px;
-  width: 50px;
-  padding: 4px;
-  float: left;
-  margin: 5px;
-}
-.dices .dice .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  float: left;
-  margin: 3.33333333px;
-  border: 0;
-}
-.dices .dice.red {
-  background: #df0000;
-  color: #df0000;
-}
-.dices .dice.yellow {
-  background: #fdca00;
-  color: #fdca00;
-}
-.dices .dice.green {
-  background: #339900;
-  color: #339900;
-}
-.dices .dice.blue {
-  background: #336699;
-  color: #336699;
-}
-.dices .dice.white {
-  background: #ffffff;
-  color: #ffffff;
-}
-.dice.d1 .dot.d5,
-.dice.d2 .dot.d7,
-.dice.d2 .dot.d3,
-.dice.d3 .dot.d1,
-.dice.d3 .dot.d5,
-.dice.d3 .dot.d9,
-.dice.d4 .dot.d1,
-.dice.d4 .dot.d3,
-.dice.d4 .dot.d7,
-.dice.d4 .dot.d9,
-.dice.d5 .dot.d1,
-.dice.d5 .dot.d3,
-.dice.d5 .dot.d5,
-.dice.d5 .dot.d7,
-.dice.d5 .dot.d9,
-.dice.d6 .dot.d1,
-.dice.d6 .dot.d3,
-.dice.d6 .dot.d4,
-.dice.d6 .dot.d6,
-.dice.d6 .dot.d7,
-.dice.d6 .dot.d9 {
-  background: black;
-}
-.dialog {
-  display: none;
-}
-div.ui-dialog-titlebar {
-  display: none;
-}

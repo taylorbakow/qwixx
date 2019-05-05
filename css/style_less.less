@@ -36,7 +36,7 @@ body {
 .row  {
     padding: 5px;
 	width: (@fieldSize + 2) * 12;
-    .field, .field .cross, .failure, .result,  .result, .math {
+    .field, .field .cross, .scratch, .result,  .result, .math {
         padding: 10px 0 0 0;
         width: @fieldSize;
         height: @fieldSize - 10;
@@ -49,8 +49,8 @@ body {
 
 }
 
-.row .border, .row .field, .row .failure, .row .result {
-	border-radius: 5px;
+.row .border, .row .field, .row .scratch, .row .result {
+	border-radius: 12px;
 }
 
 .row {
@@ -71,7 +71,7 @@ body {
     .field.crossed-out .cross {
         display: block;
     }
-    .failure {
+    .scratch {
         color: #FFF;
         border: 2px solid #C4C4C4;
         float: right;
@@ -87,7 +87,7 @@ body {
 .row.results {
 	padding: 5px;
     .result {
-        color: #FFF;
+        color: black;
         float: left;
         width: @fieldSize;
         height: @fieldSize * 3 / 5;
@@ -107,7 +107,7 @@ body {
 
 .row { 
     
-    .failure.crossed-out, .failures.crossed-out {
+    .scratch.crossed-out, .scratchs.crossed-out {
 	   color: @crossColor;
     }
 }
@@ -179,82 +179,4 @@ body {
 	.gameRow(#999999, "../black_lock.png");
 }
 
-.reset, .highscore {
-	cursor: pointer;
-	width: @fieldSize;
-	height: @fieldSize;
-	margin: 10px;
-	float: right;
-    
-    img {
-        width: @fieldSize;
-        height: @fieldSize;
-    }
-}
-
-.noLocalStorage .highscore {
-    display: none;   
-}
-
-.gameDice(@color) {
-    background: @color;
-    color: @color; 
-}
-
-.dices {
-	width: (@fieldSize + 32) * 6;
-	cursor: pointer;
-	margin: 0 auto;
-	float: left;
-    
-    .dice {
-        border: 1px solid black;
-        border-radius: 5px;
-        height: @fieldSize;
-        width: @fieldSize;
-        padding: 4px;
-        float: left;
-        margin: 5px;
-        
-        .dot {
-            width: @fieldSize / 5;
-            height: @fieldSize / 5;
-            border-radius:  @fieldSize / 10;
-            float: left;
-            margin: @fieldSize / 15;
-            border: 0;
-        }
-    }
-    .dice.red {
-        .gameDice(@redColor); 
-    }
-    .dice.yellow {
-        .gameDice(@yellowColor); 
-    }
-     .dice.green {
-        .gameDice(@greenColor); 
-    }
-     .dice.blue {
-        .gameDice(@blueColor); 
-    }
-    .dice.white {
-        .gameDice(white); 
-    }
-}
-
-.dice.d1 .dot.d5, 
-.dice.d2 .dot.d7, .dice.d2 .dot.d3,
-.dice.d3 .dot.d1, .dice.d3 .dot.d5, .dice.d3 .dot.d9,
-.dice.d4 .dot.d1, .dice.d4 .dot.d3, .dice.d4 .dot.d7, .dice.d4 .dot.d9,
-.dice.d5 .dot.d1, .dice.d5 .dot.d3, .dice.d5 .dot.d5, .dice.d5 .dot.d7, .dice.d5 .dot.d9,
-.dice.d6 .dot.d1, .dice.d6 .dot.d3, .dice.d6 .dot.d4, .dice.d6 .dot.d6, .dice.d6 .dot.d7, .dice.d6 .dot.d9 {
-	background: black;
-}
-
-.dialog {
-    display: none;
-}
-
-div.ui-dialog-titlebar {
-    display: none;
-}
+.reset, 
